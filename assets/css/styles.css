@@ -1,0 +1,10 @@
+/* this is where u write ur css! */
+
+/* example custom css that puts space after a carousel */
+.carousel {
+    margin-bottom: 1em;
+}
+
+body {
+    padding-bottom: 5%;
+}
