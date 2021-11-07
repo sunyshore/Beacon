@@ -38,7 +38,7 @@
                     <a class="nav-link active" aria-current="page" href="quiz.html">Take the Quiz!</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link">Copyright © 2021 Beacon Inc</a> 
+                    <a class="nav-link disabled">Copyright © 2021 Beacon Inc</a> 
                 </li>
             </div>
         </div>
@@ -55,9 +55,8 @@
                 </b><br><br>
                 <h1><title>Questionairre</title></h1>
                      <body>
-                        1 being not at all and 4 nearly every day <br>
-                        --------------------------------------------
-                        <br><br>
+                        1 being not at all and 4 nearly every day.<br>
+                        <hr>
                         <form>
                             <p>Little interest or pleasure in doing things:</p>
                             <input type="radio" id="1" name="little_interest" value="1">
@@ -95,7 +94,7 @@
                             
                             <br>  <br>
 
-                            <p>Feeling tired or having little energy  :</p>
+                            <p>Feeling tired or having little energy:</p>
                             <input type="radio" id="1" name="energy" value="1">
                             <label for="1">1</label>
                             <input type="radio" id="2" name="energy" value="2">
@@ -107,7 +106,7 @@
                             
                             <br>  <br>
 
-                            <p>Poor appetite or overeating   :</p>
+                            <p>Poor appetite or overeating:</p>
                             <input type="radio" id="1" name="food" value="1">
                             <label for="1">1</label>
                             <input type="radio" id="2" name="food" value="2">
@@ -119,7 +118,7 @@
                             
                             <br> <br> 
 
-                            <p>Feeling bad about yourself – or that you are a failure or have let yourself or your family down    :</p>
+                            <p>Feeling bad about yourself – or that you are a failure or have let yourself or your family down:</p>
                             <input type="radio" id="1" name="fail" value="1">
                             <label for="1">1</label>
                             <input type="radio" id="2" name="fail" value="2">
@@ -131,7 +130,7 @@
                             
                             <br>  <br>
 
-                            <p>Trouble concentrating on things, such as reading the newspaper or watching television    :</p>
+                            <p>Trouble concentrating on things, such as reading the newspaper or watching television:</p>
                             <input type="radio" id="1" name="focus" value="1">
                             <label for="1">1</label>
                             <input type="radio" id="2" name="focus" value="2">
@@ -143,7 +142,7 @@
                             
                             <br> <br>
                             
-                            <p>Moving or speaking so slowly that other people could have noticed? Or the opposite – being so fidgety or restless that you have been moving around a lot more than usual     :</p>
+                            <p>Moving or speaking so slowly that other people could have noticed? Or the opposite – being so fidgety or restless that you have been moving around a lot more than usual:</p>
                             <input type="radio" id="1" name="move" value="1">
                             <label for="1">1</label>
                             <input type="radio" id="2" name="move" value="2">
@@ -155,7 +154,7 @@
                             
                             <br>  <br>
 
-                            <p>Thoughts that you would be better off dead or of hurting yourself in some way     :</p>
+                            <p>Thoughts that you would be better off dead or of hurting yourself in some way:</p>
                             <input type="radio" id="1" name="thoughts" value="1">
                             <label for="1">1</label>
                             <input type="radio" id="2" name="thoughts" value="2">
@@ -164,9 +163,7 @@
                             <label for="3">3</label>
                             <input type="radio" id="4" name="thoughts" value="4">
                             <label for="4">4</label>
-                            
-                            <br><br><br>
-
+                            <hr>
                             <form action="/action_page.php">
                                 <label for="fname">Postal code:</label>
                                 <input type="text" id="zip" name="fname">
@@ -240,9 +237,9 @@
                                             <option value="vn">Vietnam</option>
                                         </datalist>
                                         <br>
-                                        <i>Note: due to time constraints and being sleep deprived, not all countries are included in this list.</i>
+                                        <i>Note: due to time constraints, not all countries are included in this list.</i>
                                 </div>
-                                <br><br>
+                                <hr>
                                 
                                 <a type="submit" class="btn btn-primary" id="submit" onclick="tabulateAnswers()">Submit Quiz</a>
                                 
