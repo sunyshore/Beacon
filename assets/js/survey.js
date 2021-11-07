@@ -36,19 +36,19 @@ function tabulateAnswers() {
     var answerbox = document.getElementById('answer');
 
     if (20<total_score && total_score<30) {
-        answerbox.innerHTML = "Total Score:" + total_score + "<br/>Depression Severity: Severe. Action: Treat using antidepressants with or without psychotherapy";
+        answerbox.innerHTML = "Depression Severity: Severe. Action: Treat using antidepressants with or without psychotherapy";
     }
     else if (15<total_score && total_score<20) {
-        answerbox.innerHTML = "Total Score:" + total_score + "<br/>Depression Severity: Moderately Severe. Action: Treat using antidepressants, psychotherapy or a combination of treatment.";
+        answerbox.innerHTML = "Depression Severity: Moderately Severe. Action: Treat using antidepressants, psychotherapy or a combination of treatment.";
     }
     else if (10<total_score && total_score<15) {
-        answerbox.innerHTML = "Total Score:" + total_score + "<br/>Depression Severity: Moderate. Action: Use clinical judgment about treatment, based on patient’s duration of symptoms and functional impairment.";
+        answerbox.innerHTML = "Depression Severity: Moderate. Action: Use clinical judgment about treatment, based on patient’s duration of symptoms and functional impairment.";
     }
     else if (5<total_score && total_score<10) {
-        answerbox.innerHTML = "Total Score:" + total_score + "<br/>Depression Severity: Mild. Action: Use clinical judgment about treatment, based on patient’s duration of symptoms and functional impairment.";
+        answerbox.innerHTML = "Depression Severity: Mild. Action: Use clinical judgment about treatment, based on patient’s duration of symptoms and functional impairment.";
     }
     else if (total_score<5) {
-        answerbox.innerHTML =  "Total Score:" + total_score + "<br/>Depression Severity: None/Minimal. Action: Patient may not need depression treatment.";
+        answerbox.innerHTML =  "Total Score:" + total_score + "\nDepression Severity: None/Minimal. Action: Patient may not need depression treatment.";
     }
   }
   

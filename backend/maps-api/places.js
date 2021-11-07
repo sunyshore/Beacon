@@ -7,15 +7,22 @@ var REGION = 'ca'
 var results = [];
 
 let btn = document.getElementById("submit");
-
 // Add an event handler for the click event
 btn.addEventListener("click", onSubmit);
+
+let btn2 = document.getElementById("therapy").style.visibility = 'hidden';
+
 
 
 function onSubmit(){
     REGION = document.getElementById("country").value
     RADIUS = document.getElementById("radius").value
     ZIP = document.getElementById("zip").value
+
+    document.getElementById("therapy").style.visibility = 'visible'
+    
+    let btn2 = document.getElementById("therapy")
+    btn2.addEventListener("click", findPlaces);
 
     console.log(REGION);
     console.log(RADIUS);
@@ -61,6 +68,14 @@ async function setInfo(place_id){
 
 async function findPlaces(){
 
+    var answerbox = document.getElementById('resources');
+
+    answerbox.innerHTML = "Loading...."
+
+    REGION = document.getElementById("country").value
+    RADIUS = document.getElementById("radius").value
+    ZIP = document.getElementById("zip").value
+
     await getCoordinates(ZIP);
 
     let request = {
@@ -86,10 +101,17 @@ async function findPlaces(){
     }
 
     const displayResults = () => {
+        answerbox.innerHTML = ``
         console.log(results);
         results.sort((a, b) => a.rating > b.rating ? -1 : 1)
                 .forEach(result => {
-                    places.innerHTML += `<li>${result.name} - ${result.rating} <br> ${result.formatted_phone_number} - ${result.website}</li>`;
+                    if (result.rating == 0){
+                        result.rating = `Unrated`
+                    } else {
+                        result.rating = result.rating + "/5"
+                    }
+
+                    answerbox.innerHTML += `<li>${result.name} <br> Rating: ${result.rating} <br> Location: ${result.vicinity} <br>Phone Number: ${result.formatted_phone_number} <br> Website: <a href=${result.website}>link link</a></li>`;
                 });
     };
 
