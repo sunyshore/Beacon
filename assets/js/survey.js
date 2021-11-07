@@ -1,15 +1,5 @@
 /* This is the java code for the survey portion of our website. Yay! */
 
-// Get a reference to the button
-let btn = document.getElementById("submit");
-
-// Add an event handler for the click event
-btn.addEventListener("click", myFunction);
-
-function myFunction(){
-    
-}
-
 // function to calculate the result of the survey
 function tabulateAnswers() {
     // initialize variables for each choice's score
