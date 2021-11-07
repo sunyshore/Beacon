@@ -44,20 +44,21 @@ function tabulateAnswers() {
     
     // Display answer corresponding to that choice
     var answerbox = document.getElementById('answer');
-    if (0<total_score<5) {
-      answerbox.innerHTML = "Depression Severity: None/Minimal. Action: Patient may not need depression treatment.";
-    }
-    else if (5<total_score<10) {
-      answerbox.innerHTML = "Depression Severity: Mild. Action: Use clinical judgment about treatment, based on patient’s duration of symptoms and functional impairment.";
-    }
-    else if (10<total_score<15) {
-      answerbox.innerHTML = "Depression Severity: Moderate. Action: Use clinical judgment about treatment, based on patient’s duration of symptoms and functional impairment.";
+
+    if (20<total_score<30) {
+        answerbox.innerHTML = "Depression Severity: Severe. Action: Treat using antidepressants with or without psychotherapy";
     }
     else if (15<total_score<20) {
-      answerbox.innerHTML = "Depression Severity: Moderately Severe. Action: Treat using antidepressants, psychotherapy or a combination of treatment.";
+        answerbox.innerHTML = "Depression Severity: Moderately Severe. Action: Treat using antidepressants, psychotherapy or a combination of treatment.";
     }
-    else if (20<total_score<30) {
-      answerbox.innerHTML = "Depression Severity: Severe. Action: Treat using antidepressants with or without psychotherapy";
+    else if (10<total_score<15) {
+        answerbox.innerHTML = "Depression Severity: Moderate. Action: Use clinical judgment about treatment, based on patient’s duration of symptoms and functional impairment.";
+    }
+    else if (5<total_score<10) {
+        answerbox.innerHTML = "Depression Severity: Mild. Action: Use clinical judgment about treatment, based on patient’s duration of symptoms and functional impairment.";
+    }
+    else if (0<total_score<5) {
+        answerbox.innerHTML = "Depression Severity: None/Minimal. Action: Patient may not need depression treatment.";
     }
   }
   
@@ -65,4 +66,11 @@ function tabulateAnswers() {
   function resetAnswer() {
     var answerbox = document.getElementById('answer');
     answerbox.innerHTML = "Your result will show up here!";
+
+    var btns = document.getElementsByTagName('input');
+    for (i=0; i<btns.length; i++) {
+        if (btns[i].checked) {
+            btns[i].checked = false;
+        }
+      }
   }
