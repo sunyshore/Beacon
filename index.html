@@ -10,32 +10,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Beacon</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="resources.html">Resources</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="quiz.html">Take the Quiz!</a>
-                </li>
-            </div>
-        </div>
-    </nav>
     <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #c1f1f1">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Beacon</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quiz.html">Take the Quiz!</a>
+                    </li>
+                </div>
+            </div>
+        </nav>
         <br>
-        <img src="./assets/images/Beacon_Banner.png" class="card-img-top" alt="Beacon Banner">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+            <!-- put ur own images here -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./assets/images/q1.png" class="d-block w-100" alt="How do I know if I’m unwell and where can I get help?">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/images/q2.png" class="d-block w-100" alt="What do I do if the support doesn't help? ">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/images/q3.png" class="d-block w-100" alt="Will I be judged if I am seeking mental health help?">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/images/q4.png" class="d-block w-100" alt="Introducing . . .">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <img src="./assets/images/Beacon_Banner-min.png" class="card-img-top" alt="Beacon Banner">
         <br><br>
         <div class="row">
             <div class="col-12 col-lg-7">
@@ -45,15 +70,18 @@
                 <br>
                 Beacon is a website that focuses on providing mental health resources.
                 <br>
-                The site includes a generalized mental health survey on depression that is based off of multiple reliable mental health survey sites. 
-                <br>
-                <br>
-                <i>Disclaimer: None of us currently working on this project are professionally educated in the psychology and mental health field. We currently only have screening for Major Depressive Disorder (MDD) OR Seasonal Depression at the moment, using resources and research we found online</i>
+                The site includes a generalized mental health survey on depression that is based on
+                multiple reliable mental health survey sites. 
+                <br><br>
+                <br><br>
+                <i>Disclaimer: None of us currently working on this project are professionally educated in the 
+                    psychology and mental health field. We currently only have screening for 
+                    Major Depressive Disorder (MDD) OR Seasonal Depression at the moment, using resources and research we found online.</i>
             </div>
             <div class="col-12 col-lg-5">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">MDD Quiz</h5>
+                        <h5 class="card-title">Major Depressive Disorder (MDD) Quiz</h5>
                         <p class="card-text">Click here to take the quiz!</p>
                         <a href="quiz.html" class="btn btn-primary">TAKE QUIZ</a>
                     </div>
