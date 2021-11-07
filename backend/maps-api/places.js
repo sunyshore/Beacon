@@ -12,7 +12,6 @@ function getCoordinates(ZIP, _callback){
         console.log(LAT,LNG)
         _callback();
       })
-      
   };
 
 function findPlaces(){
