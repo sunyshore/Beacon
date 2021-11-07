@@ -1,21 +1,29 @@
 var RADIUS = 5000
 var ZIP = "L4B3G4"
 const API_KEY = "AIzaSyAp5Wy8XyfO2a6U0eKlFns8NhDbxFieRx0"
+var LAT;
+var LNG;
 
-
-function getCoordinates(ZIP, _callback){
-    fetch("https://maps.googleapis.com/maps/api/geocode/json?address="+ ZIP +'&key='+ API_KEY + '&region=ca')
-      .then(response => response.json())
-      .then(data => {
-        LAT = data.results[0].geometry.location.lat;
-        LNG = data.results[0].geometry.location.lng;
-        console.log(LAT,LNG)
-        _callback();
-      })
+async function getCoordinates(ZIP){
+    let data;
+    try {
+        let response = await fetch("https://maps.googleapis.com/maps/api/geocode/json?address="+ ZIP +'&key='+ API_KEY + '&region=ca');
+        data = await response.json()
+    } catch (e) {
+        LAT = 0;
+        LNG = 0;
+        alert("Location Does Not Exist Or Server Is Down!")
+        return;
+    }
+    console.log(data)
+    LAT = data.results[0].geometry.location.lat;
+    LNG = data.results[0].geometry.location.lng;
   };
 
-function findPlaces(){
-    
+async function findPlaces(){
+
+    await getCoordinates(ZIP);
+
     let request = {
         location: new google.maps.LatLng(LAT, LNG),
         keyword: 'mental health',
@@ -49,4 +57,5 @@ function findPlaces(){
 
 };
 
-getCoordinates(ZIP, findPlaces);
+findPlaces();
+
