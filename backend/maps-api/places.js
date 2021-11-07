@@ -13,7 +13,9 @@ btn.addEventListener("click", onSubmit);
 
 
 function onSubmit(){
-    console.log("hello world");
+    REGION = document.getElementById("country").value
+    RADIUS = document.getElementById("radius").value
+    ZIP = document.getElementById("zip").value
 }
 
 
