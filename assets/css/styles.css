@@ -19,6 +19,16 @@ body {
 .card {
     background-color: #A3E2E2;
 }
+.btn{
+    background-color: #61c0cc;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
 
 .list-group-item {
     background-color: #c1f1f1;
