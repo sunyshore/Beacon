@@ -48,10 +48,14 @@
             <div class="col-12 col-lg-7">
                 <h1>Questions</h1>
                 <b>Over the last 2 weeks, how often have you been bothered by any of the
-                following problems?</b><br><br>
+                following problems?
+                </b><br><br>
                 <h1><title>Questionairre</title></h1>
                      <body>
-                        <form action="/action_page.php">
+                        1 being not at all and 4 nearly every day <br>
+                        --------------------------------------------
+                        <br><br>
+                        <form>
                             <p>Little interest or pleasure in doing things:</p>
                             <input type="radio" id="1" name="little_interest" value="1">
                             <label for="1">1</label>
@@ -158,10 +162,91 @@
                             <input type="radio" id="4" name="thoughts" value="4">
                             <label for="4">4</label>
                             
-                            <br>  <br>
+                            <br><br><br>
 
+                            <form action="/action_page.php">
+                                <label for="fname">Postal code:</label>
+                                <input type="text" id="fname" name="fname">
+                                <br><br>
+                                <i>Note: You can choose to either enter the first three letters of your postal code 
+                                    or if you would like better accuracy of recommended services, your entire postal code.</i>
+                                <br><br>
 
-                        </form>
+                                <label for="fname">Service Proximity (m):</label>
+                                <input type="text" id="fname" name="fname">
+                                <br><br>
+
+                                <div class="dropdown">
+                                    <label>Region (Country):
+                                        <input list="countries" name="myCountries" /></label>
+                                        <datalist id="countries">
+                                            <option value="ca">Canada</option>
+                                            <option value="us">United States (USA)</option>
+                                            <option value="af">Afghanistan</option>
+                                            <option value="dz">Algeria</option>
+                                            <option value="aq">Antarctica</option>
+                                            <option value="ar">Argentina</option>
+                                            <option value="au">Australia</option>
+                                            <option value="at">Austria</option>
+                                            <option value="bd">Bangladesh</option>
+                                            <option value="be">Belgium</option>
+                                            <option value="bm">Bermuda</option>
+                                            <option value="br">Brazil</option>
+                                            <option value="kh">Cambodia</option>
+                                            <option value="cf">Central African Republic</option>
+                                            <option value="cl">Chile</option>
+                                            <option value="ch">China</option>
+                                            <option value="co">Colombia</option>
+                                            <option value="cr">Costa Rica</option>
+                                            <option value="hr">Croatia</option>
+                                            <option value="cu">Cuba</option>
+                                            <option value="dk">Denmark</option>
+                                            <option value="do">Dominican Republic</option>
+                                            <option value="eg">Egypt</option>
+                                            <option value="fi">Finland</option>
+                                            <option value="fr">France</option>
+                                            <option value="de">Germany</option>
+                                            <option value="gr">Greece</option>
+                                            <option value="gl">Greenland</option>
+                                            <option value="hk">Hong Kong</option>
+                                            <option value="hu">Hungary</option>
+                                            <option value="is">Iceland</option>
+                                            <option value="in">India</option>
+                                            <option value="id">Indonesia</option>
+                                            <option value="ir">Iran</option>
+                                            <option value="iq">Iraq</option>
+                                            <option value="ie">Ireland</option>
+                                            <option value="il">Israel</option>
+                                            <option value="it">Italy</option>
+                                            <option value="jm">Jamaica</option>
+                                            <option value="jp">Japan</option>
+                                            <option value="ke">Kenya</option>
+                                            <option value="mx">Mexico</option>
+                                            <option value="mn">Mongolia</option>
+                                            <option value="nl">Netherlands</option>
+                                            <option value="ng">Nigeria</option>
+                                            <option value="no">Norway</option>
+                                            <option value="pk">Pakistan</option>
+                                            <option value="ph">Philippines</option>
+                                            <option value="ru">Russia</option>
+                                            <option value="za">South Africa</option>
+                                            <option value="kr">South Korea</option>
+                                            <option value="tw">Taiwan</option>
+                                            <option value="tr">Turkey</option>
+                                            <option value="gb">United Kingdom</option>
+                                            <option value="vn">Vietnam</option>
+                                        </datalist>
+                                        <br>
+                                        <i>Note: due to time constraints and being sleep deprived, not all countries are included in this list.</i>
+                                </div>
+                                <br><br>
+
+                                <button type="submit" class="btn btn-primary" id="submit" onclick="tabulateAnswers()">Submit Quiz</button>
+                                <button type="reset" class="btn btn-primary" id="reset" onclick="resetAnswer()">Reset Quiz</button>
+
+                            <div id="answer">Your result will show up here!</div>
+                            </form>
+                            
                      </body>
             </div>
             <div class="col-12 col-lg-5">
