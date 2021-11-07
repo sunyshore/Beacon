@@ -10,6 +10,8 @@ body {
     padding-bottom: 5%;
 }
 
-.navbar {
-    background-color: LightBlue;
+.navbar-brand {
+    background-color: #A3E2E2;
+    font-family: 'Perpetua Titling MT';
+    padding: 0% 1%;
 }
