@@ -111,7 +111,7 @@ async function findPlaces(){
                         result.rating = result.rating + "/5"
                     }
 
-                    answerbox.innerHTML += `<li>${result.name} <br> Rating: ${result.rating} <br> Location: ${result.vicinity} <br>Phone Number: ${result.formatted_phone_number} <br> Website: <a href=${result.website}>link link</a></li>`;
+                    answerbox.innerHTML += `<li>${result.name} <br> Rating: ${result.rating} <br> Location: ${result.vicinity} <br>Phone Number: ${result.formatted_phone_number} <br> Website: <a href=${result.website}>click here</a></li>`;
                 });
     };
 
