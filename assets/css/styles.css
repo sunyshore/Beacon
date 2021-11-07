@@ -15,3 +15,11 @@ body {
     font-family: 'Perpetua Titling MT';
     padding: 0% 1%;
 }
+
+.card {
+    background-color: #A3E2E2;
+}
+
+.list-group-item {
+    background-color: #c1f1f1;
+}
