@@ -14,7 +14,7 @@ function myFunction(){
 function tabulateAnswers() {
     // initialize variables for each choice's score
     // If you add more choices and outcomes, you must add another variable here.
-    var total_score=0
+    var total_score=0;
 
     
     // get a list of the radio inputs on the page
@@ -45,19 +45,19 @@ function tabulateAnswers() {
     // Display answer corresponding to that choice
     var answerbox = document.getElementById('answer');
 
-    if (20<total_score<30) {
+    if (20<total_score && total_score<30) {
         answerbox.innerHTML = "Depression Severity: Severe. Action: Treat using antidepressants with or without psychotherapy";
     }
-    else if (15<total_score<20) {
+    else if (15<total_score && total_score<20) {
         answerbox.innerHTML = "Depression Severity: Moderately Severe. Action: Treat using antidepressants, psychotherapy or a combination of treatment.";
     }
-    else if (10<total_score<15) {
+    else if (10<total_score && total_score<15) {
         answerbox.innerHTML = "Depression Severity: Moderate. Action: Use clinical judgment about treatment, based on patient’s duration of symptoms and functional impairment.";
     }
-    else if (5<total_score<10) {
+    else if (5<total_score && total_score<10) {
         answerbox.innerHTML = "Depression Severity: Mild. Action: Use clinical judgment about treatment, based on patient’s duration of symptoms and functional impairment.";
     }
-    else if (0<total_score<5) {
+    else if (total_score<5) {
         answerbox.innerHTML = "Depression Severity: None/Minimal. Action: Patient may not need depression treatment.";
     }
   }
@@ -66,8 +66,9 @@ function tabulateAnswers() {
   function resetAnswer() {
     var answerbox = document.getElementById('answer');
     answerbox.innerHTML = "Your result will show up here!";
-
+    total_score = 0;
     var btns = document.getElementsByTagName('input');
+
     for (i=0; i<btns.length; i++) {
         if (btns[i].checked) {
             btns[i].checked = false;
