@@ -166,19 +166,19 @@
 
                             <form action="/action_page.php">
                                 <label for="fname">Postal code:</label>
-                                <input type="text" id="fname" name="fname">
+                                <input type="text" id="zip" name="fname">
                                 <br><br>
                                 <i>Note: You can choose to either enter the first three letters of your postal code 
                                     or if you would like better accuracy of recommended services, your entire postal code.</i>
                                 <br><br>
 
                                 <label for="fname">Service Proximity (m):</label>
-                                <input type="text" id="fname" name="fname">
+                                <input type="text" id="radius" name="fname">
                                 <br><br>
 
                                 <div class="dropdown">
                                     <label>Region (Country):
-                                        <input list="countries" name="myCountries" /></label>
+                                        <input list="countries" name="myCountries" id="country"/></label>
                                         <datalist id="countries">
                                             <option value="ca">Canada</option>
                                             <option value="us">United States (USA)</option>
@@ -271,4 +271,9 @@
 
     <!-- u can include custom JAVASCRIPT here -->
     <script src="./assets/js/scripts.js"></script>
+
+    <!-- u can include custom JAVASCRIPT here -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAp5Wy8XyfO2a6U0eKlFns8NhDbxFieRx0&libraries=places">
+    </script>
+    <script src="./backend/maps-api/places.js"></script>
 </body>
