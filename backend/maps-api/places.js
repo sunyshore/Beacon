@@ -6,15 +6,7 @@ var LNG;
 var REGION = 'ca'
 var results = [];
 
-let btn = document.getElementById("submit");
-// Add an event handler for the click event
-btn.addEventListener("click", onSubmit);
-
-let btn2 = document.getElementById("therapy").style.visibility = 'hidden';
-
-
-
-function onSubmit(){
+const onSubmit = () => {
     REGION = document.getElementById("country").value
     RADIUS = document.getElementById("radius").value
     ZIP = document.getElementById("zip").value
@@ -23,14 +15,10 @@ function onSubmit(){
     
     let btn2 = document.getElementById("therapy")
     btn2.addEventListener("click", findPlaces);
-
-    console.log(REGION);
-    console.log(RADIUS);
-    console.log(ZIP);
 }
 
 
-async function getCoordinates(ZIP){
+const getCoordinates = async (ZIP) =>{
     let data;
     try {
         let response = await fetch("https://maps.googleapis.com/maps/api/geocode/json?address="+ ZIP +'&key='+ API_KEY + '&region=' + REGION);
@@ -45,7 +33,7 @@ async function getCoordinates(ZIP){
   };
 
 
-async function setInfo(place_id){
+ const setInfo = async (place_id) => {
     let request = {
         placeId: place_id,
         fields: ['website', 'formatted_phone_number', 'opening_hours']
@@ -66,7 +54,7 @@ async function setInfo(place_id){
 
 };
 
-async function findPlaces(){
+const findPlaces = async () => {
     results = [];
 
     var answerbox = document.getElementById('resources');
@@ -103,7 +91,6 @@ async function findPlaces(){
 
     const displayResults = () => {
         answerbox.innerHTML = ``
-        console.log(results);
         results.sort((a, b) => a.rating > b.rating ? -1 : 1)
                 .forEach(result => {
                     if (result.rating == 0){
@@ -136,3 +123,8 @@ async function findPlaces(){
     service.nearbySearch(request, callback);
 };
 
+let btn = document.getElementById("submit");
+// Add an event handler for the click event
+btn.addEventListener("click", onSubmit);
+
+let btn2 = document.getElementById("therapy").style.visibility = 'hidden';
