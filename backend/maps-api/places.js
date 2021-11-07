@@ -16,6 +16,10 @@ function onSubmit(){
     REGION = document.getElementById("country").value
     RADIUS = document.getElementById("radius").value
     ZIP = document.getElementById("zip").value
+
+    console.log(REGION);
+    console.log(RADIUS);
+    console.log(ZIP);
 }
 
 
@@ -101,7 +105,4 @@ async function findPlaces(){
 
     service.nearbySearch(request, callback);
 };
-
-//findPlaces();
-
 

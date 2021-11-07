@@ -240,9 +240,12 @@
                                         <i>Note: due to time constraints and being sleep deprived, not all countries are included in this list.</i>
                                 </div>
                                 <br><br>
-
+                                
                                 <a type="submit" class="btn btn-primary" id="submit" onclick="tabulateAnswers()">Submit Quiz</a>
+                                
                                 <a type="reset" class="btn btn-primary" id="reset" onclick="resetAnswer()">Reset Quiz</a>
+                                <ol id="places"></ol>
+                                <a type="therapy" class="btn btn-primary" id="therapy" onclick="findPlaces()">Get Therapy Sources</a>
                             
                             <br><br>
                             <div id="answer">Your result will show up here!</div>
@@ -278,7 +281,7 @@
     </script>
     <script src="./backend/maps-api/places.js"></script>
 
-    
+
     <script src="./assets/js/survey.js"></script>
 
 </body>

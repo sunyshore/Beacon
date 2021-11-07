@@ -48,7 +48,7 @@ function tabulateAnswers() {
         answerbox.innerHTML = "Depression Severity: Mild. Action: Use clinical judgment about treatment, based on patient’s duration of symptoms and functional impairment.";
     }
     else if (total_score<5) {
-        answerbox.innerHTML = "Depression Severity: None/Minimal. Action: Patient may not need depression treatment.";
+        answerbox.innerHTML =  "Total Score:" + total_score + "\nDepression Severity: None/Minimal. Action: Patient may not need depression treatment.";
     }
   }
   
