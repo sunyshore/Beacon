@@ -36,19 +36,19 @@ function tabulateAnswers() {
     var answerbox = document.getElementById('answer');
 
     if (20<total_score && total_score<30) {
-        answerbox.innerHTML = "Depression Severity: Severe. Action: Treat using antidepressants with or without psychotherapy";
+        answerbox.innerHTML = "Total Score: " + total_score + "/27 <br>Depression Risk: Severe. <br>Action: Seek clinical judgement as soon as possible. You are at very high risk.";
     }
     else if (15<total_score && total_score<20) {
-        answerbox.innerHTML = "Depression Severity: Moderately Severe. Action: Treat using antidepressants, psychotherapy or a combination of treatment.";
+        answerbox.innerHTML = "Total Score: " + total_score + "/27 <br>Depression Risk: Moderately Severe. <br>Action: Seek clinical judgement as soon as possible, for you are at high risk.";
     }
     else if (10<total_score && total_score<15) {
-        answerbox.innerHTML = "Depression Severity: Moderate. Action: Use clinical judgment about treatment, based on patient’s duration of symptoms and functional impairment.";
+        answerbox.innerHTML = "Total Score: " + total_score + "/27 <br>Depression Risk: Moderate. <br>Action: Use clinical judgment about treatment, based on patient’s duration of symptoms and functional impairment.";
     }
     else if (5<total_score && total_score<10) {
-        answerbox.innerHTML = "Depression Severity: Mild. Action: Use clinical judgment about treatment, based on patient’s duration of symptoms and functional impairment.";
+        answerbox.innerHTML = "Total Score: " + total_score + "/27 <br>Depression Risk: Mild. <br>Action: Use clinical judgment about treatment, based on patient’s duration of symptoms and functional impairment.";
     }
     else if (total_score<5) {
-        answerbox.innerHTML =  "Total Score:" + total_score + "\nDepression Severity: None/Minimal. Action: Patient may not need depression treatment.";
+        answerbox.innerHTML =  "Total Score: " + total_score + "/27 <br>Depression Risk: None/Minimal. <br>Action: Patient may not need depression treatment.";
     }
   }
   
