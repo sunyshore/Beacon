@@ -67,6 +67,7 @@ async function setInfo(place_id){
 };
 
 async function findPlaces(){
+    results = [];
 
     var answerbox = document.getElementById('resources');
 
